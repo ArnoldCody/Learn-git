@@ -6,15 +6,33 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A7D463E41D4F94D70027C374 /* ContentInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7D463DF1D4F94D70027C374 /* ContentInfo.plist */; };
+		A7D463E51D4F94D70027C374 /* file1.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7D463E01D4F94D70027C374 /* file1.txt */; };
+		A7D463E61D4F94D70027C374 /* file2.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7D463E11D4F94D70027C374 /* file2.txt */; };
+		A7D463E71D4F94D70027C374 /* file3.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7D463E21D4F94D70027C374 /* file3.txt */; };
+		A7D463EA1D4F94F20027C374 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7D463E81D4F94F20027C374 /* LICENSE.txt */; };
+		A7D463EB1D4F94F20027C374 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7D463E91D4F94F20027C374 /* readme.txt */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		A7D463D61D4F93810027C374 /* Learn git */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = "Learn git"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D463D91D4F93810027C374 /* ContentInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ContentInfo.plist; sourceTree = "<group>"; };
+		A7D463DF1D4F94D70027C374 /* ContentInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ContentInfo.plist; sourceTree = "<group>"; };
+		A7D463E01D4F94D70027C374 /* file1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file1.txt; sourceTree = "<group>"; };
+		A7D463E11D4F94D70027C374 /* file2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file2.txt; sourceTree = "<group>"; };
+		A7D463E21D4F94D70027C374 /* file3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file3.txt; sourceTree = "<group>"; };
+		A7D463E31D4F94D70027C374 /* setup git.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "setup git.md"; sourceTree = "<group>"; };
+		A7D463E81D4F94F20027C374 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		A7D463E91D4F94F20027C374 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		A7D463CF1D4F93810027C374 = {
 			isa = PBXGroup;
 			children = (
+				A7D463E81D4F94F20027C374 /* LICENSE.txt */,
+				A7D463E91D4F94F20027C374 /* readme.txt */,
 				A7D463D81D4F93810027C374 /* Learn git */,
 				A7D463D71D4F93810027C374 /* Products */,
 			);
@@ -31,6 +49,11 @@
 		A7D463D81D4F93810027C374 /* Learn git */ = {
 			isa = PBXGroup;
 			children = (
+				A7D463DF1D4F94D70027C374 /* ContentInfo.plist */,
+				A7D463E01D4F94D70027C374 /* file1.txt */,
+				A7D463E11D4F94D70027C374 /* file2.txt */,
+				A7D463E21D4F94D70027C374 /* file3.txt */,
+				A7D463E31D4F94D70027C374 /* setup git.md */,
 				A7D463D91D4F93810027C374 /* ContentInfo.plist */,
 			);
 			path = "Learn git";
@@ -90,6 +113,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D463EB1D4F94F20027C374 /* readme.txt in Resources */,
+				A7D463E61D4F94D70027C374 /* file2.txt in Resources */,
+				A7D463E51D4F94D70027C374 /* file1.txt in Resources */,
+				A7D463E71D4F94D70027C374 /* file3.txt in Resources */,
+				A7D463EA1D4F94F20027C374 /* LICENSE.txt in Resources */,
+				A7D463E41D4F94D70027C374 /* ContentInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
