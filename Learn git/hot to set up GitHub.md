@@ -1,3 +1,4 @@
+## 创建远程库
 ### 创建SSH Key
 在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
 `$ ssh-keygen -t rsa -C"youremail@example.com"`
@@ -41,4 +42,51 @@ Branch master set up to track remote branch master from origin.
 
 由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
 
-推送成功后，可以立刻在GitHub页面中看到远程库的内容已经和本地一模一样：
+推送成功后，可以立刻在GitHub页面中看到远程库的内容已经和本地一模一样
+
+之后推送可以用简化命令`git push`
+
+### SSH警告
+当你第一次使用Git的clone或者push命令连接GitHub时，会得到一个警告：
+
+```
+The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.
+RSA key fingerprint is xx.xx.xx.xx.xx.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+这是因为Git使用SSH连接，而SSH连接在第一次验证GitHub服务器的Key时，需要你确认GitHub的Key的指纹信息是否真的来自GitHub的服务器，输入yes回车即可。
+
+
+Git会输出一个警告，告诉你已经把GitHub的Key添加到本机的一个信任列表里了：
+
+```
+Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
+```
+
+这个警告只会出现一次，后面的操作就不会有任何警告了。
+
+### 小结
+
+要关联一个远程库，使用命令`git remote add origin git@server-name:path/repo-name.git；`
+
+关联后，使用命令`git push -u origin master`第一次推送master分支的所有内容；
+
+此后，每次本地提交后，只要有必要，就可以使用命令`git push origin master`推送最新修改；
+
+## 从远程库克隆
+
+现在，远程库已经准备好了，下一步是用命令git clone克隆一个本地库：
+
+```
+$ git clone git@github.com:michaelliao/gitskills.git
+Cloning into 'gitskills'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (3/3), done.
+$ cd gitskills
+$ ls
+README.md
+```
+
+注意把Git库的地址换成你自己的，然后进入gitskills目录看看，已经有README.md文件了。
